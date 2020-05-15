@@ -1,0 +1,28 @@
+
+<p align="right">
+  <a href="/accounts/login">Login</a>
+  <a href="/accounts/logout">Logout</a>
+</p>
+
+{% if request.user.is_authenticated %}
+    <p>
+        Hello, {{ request.user.username }}!
+        <a href="/polls/create">New Poll</a>
+    </p>
+{% else %}
+
+<p>
+    YOuyASD !
+    <a href="/registration/signup">Sign Up</a>
+
+</p>
+
+{% endif %}
+
+
+
+{% block content %}
+<p>
+    This is a placeholder block.
+</p>
+{% endblock %}
